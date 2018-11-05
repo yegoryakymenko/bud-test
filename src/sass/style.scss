@@ -1,0 +1,590 @@
+/* Regular */
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../fonts/league-gothic/webfonts/leaguegothic-italic-webfont.eot');
+    src: url('../fonts/league-gothic/webfonts/leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-italic-webfont.woff') format('woff'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-italic-webfont.ttf') format('truetype'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+/* Italic */
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../fonts/league-gothic/webfonts/leaguegothic-regular-webfont.eot');
+    src: url('../fonts/league-gothic/webfonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Condensed */
+@font-face {
+    font-family: 'League Gothic Condensed';
+    src: url('../fonts/league-gothic/webfonts/leaguegothic-condensed-regular-webfont.eot');
+    src: url('../fonts/league-gothic/webfonts/leaguegothic-condensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-condensed-regular-webfont.woff') format('woff'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-condensed-regular-webfont.ttf') format('truetype'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-condensed-regular-webfont.svg#league_gothic_condensed-Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Condensed Italic */
+@font-face {
+    font-family: 'League Gothic Condensed';
+    src: url('../fonts/league-gothic/webfonts/leaguegothic-condensed-italic-webfont.eot');
+    src: url('../fonts/league-gothic/webfonts/leaguegothic-condensed-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-condensed-italic-webfont.woff') format('woff'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-condensed-italic-webfont.ttf') format('truetype'),
+         url('../fonts/league-gothic/webfonts/leaguegothic-condensed-italic-webfont.svg#league_gothic_condensed_itaRg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Arial MT';
+    src: url('../fonts/arial-mt/ArialMT.eot');
+    src: url('../fonts/arial-mt/ArialMT.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/arial-mt/ArialMT.woff2') format('woff2'),
+        url('../fonts/arial-mt/ArialMT.woff') format('woff'),
+        url('../fonts/arial-mt/ArialMT.svg#ArialMT') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial - Italic MT';
+    src: url('../fonts/arial-mt-italic/Arial-ItalicMT.eot');
+    src: url('../fonts/arial-mt-italic/Arial-ItalicMT.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/arial-mt-italic/Arial-ItalicMT.woff2') format('woff2'),
+        url('../fonts/arial-mt-italic/Arial-ItalicMT.woff') format('woff'),
+        url('../fonts/arial-mt-italic/Arial-ItalicMT.ttf') format('truetype'),
+        url('../fonts/arial-mt-italic/Arial-ItalicMT.svg#Arial-ItalicMT') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+html { box-sizing: border-box; }
+
+*:not(img), *:before, *:after { box-sizing: inherit; }
+html, body {
+    height: 100%;
+}
+.header {
+    width: 100%;
+    &-navbar {
+        width: 100%;
+        border-bottom: 3px solid #22aaec;
+        text-align: center;
+        position: relative;
+        h3 {
+            color: #076e9f;
+            font-family: "League Gothic";
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 18px;
+            text-transform: uppercase;
+            span {
+               color: #22aaec; 
+            }
+        }
+        ul {
+            padding: 0;
+            li {
+                list-style: none;
+                display: inline-block;
+                padding: 5px 18px;
+                cursor: pointer;
+                border: 1px solid #fff;
+                a {
+                    text-decoration: none;
+                    color: #707070;
+                    font-family: "Arial MT";
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    text-transform: uppercase;
+                }
+            }
+            li:hover {
+                border: 1px solid #000;
+                background-color: #076e9f;
+                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+            }
+            li:hover a {
+                color: #fff;
+            }
+        }
+        &__social {
+            position: absolute;
+            right: 30px;
+            top: -10px;
+            i {
+               color: #d4d4d4;
+                font-size: 18px;
+                padding: 3px; 
+                cursor: pointer;
+            }
+        }
+    }
+    &-main {
+        background: url('../img/city.png') no-repeat;
+        background-size: 100%;
+        padding-top: 10rem;
+        text-align: center;
+        h3 {
+            display: block;
+            max-width: 20%;
+            margin: 0 auto;
+            padding: 25px 30px;
+            background: rgba(255,255,255,.8);
+            color: #076e9f;
+            font-family: "League Gothic";
+            font-size: 60px;
+            font-weight: 400;
+            line-height: 18px;
+            text-transform: uppercase;
+            span {
+                color: #22aaec;
+            }
+            
+        }
+        h3 + p {
+            display: block;
+            max-width: 50%;
+            margin: 0 auto;
+            margin-top: 5rem;
+            padding: 25px 20px;
+            background: rgba(255,255,255,.8);
+            color: #076e9f;
+            font-family: "League Gothic";
+            font-size: 35px;
+            font-weight: 400;
+            line-height: 30px;
+            text-transform: uppercase;
+            span {
+                color: #22aaec;
+            }
+        }
+        &__comments {
+            width: 100%;
+            background: rgba(0,0,0,.5);
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+            padding: 3rem 0 3rem 0;
+            border-bottom: 3px solid #22aaec;
+            .comment {
+                background: rgba(255,255,255,.9);
+                position: relative;
+                width: 200px;
+                height: 49px;
+                padding: 10px 15px;
+                text-align: left;
+                img {
+                    position: absolute;
+                    left: -2rem;
+                    top: 0;
+                }
+                .text {
+                    margin-left: 2rem;
+                    p {
+                    display: inline-block;
+                    margin: 0;
+                   
+                    color: #515151;
+                    font-family: "Arial - Italic MT";
+                    font-size: 9px;
+                    font-weight: bold;
+                    line-height: 14px;
+                } 
+
+                span {
+                    margin: 0 auto;
+                    margin-top: 5px;
+                    display: block;
+                    color: #828282;
+                    font-family: "Arial MT";
+                    font-size: 9px;
+                    font-weight: 400;
+                } 
+                }
+               
+            }
+    }
+}
+}
+.main {
+    width: 100%;
+    display: flex;
+    .aside {
+        max-width: 15%;
+        padding: 0rem 0rem 0rem 3rem;
+        border-right: 1px dotted #d5d5d5;
+        .author {
+            border-bottom: 1px dotted #d5d5d5;
+            padding: 1rem 2rem 2rem 0rem;
+            h3 {
+                color: #076e9f;
+                font-family: "League Gothic";
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 14px;
+                text-transform: uppercase;
+            }
+            p {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            font-family: Arial;
+            }
+            span {
+               color: #076e9f;
+               font-weight: bold; 
+            }
+        }
+        .posts {
+             border-bottom: 1px dotted #d5d5d5;
+             padding: 1rem 2rem 2rem 0rem;
+           h3 {
+                color: #076e9f;
+                font-family: "League Gothic";
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 14px;
+                text-transform: uppercase;
+            }
+            &-block {
+                display: flex;
+                margin-top: 10px;
+                &__comments {
+                    margin-left: 15px;
+                    p:first-child {
+                        margin: 0;
+                        color: #5c5c5c;
+                        font-family: "Arial MT";
+                        font-size: 10px;
+                        font-weight: bold;
+                        line-height: 18px;
+                        text-transform: uppercase;
+                    }
+                    p:last-child {
+                        display: inline-block;
+                        margin: 0;
+                        margin-left: 5px;
+                        margin-top: 5px;
+                        color: #5c5c5c;
+                        font-family: "Arial MT";
+                        font-size: 10px;
+                        font-weight: 400;
+                        font-style: italic;
+                        line-height: 18px;
+                        vertical-align: top;
+                    }
+                    i {
+                        margin-top: 5px;
+                        color: #dddddd;
+                    }
+                }
+            }
+        }
+         .currency {
+                padding: 1rem 2rem 2rem 0rem;
+                 border-bottom: 1px dotted #d5d5d5;
+                h3 {
+                color: #076e9f;
+                font-family: "League Gothic";
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 14px;
+                 text-transform: uppercase;
+                } 
+                .table {
+                    
+                    color: #076e9f;
+                    table {
+                        tr {
+                            td {
+                                text-align: center;
+                            }
+                        }
+                        tr:first-child {
+                            color: white;
+                        }
+                    }
+                }
+          }
+    }
+    .article {
+        padding: 0rem 3rem 0rem 0rem;
+        .top {
+            padding: 1rem 0rem 2rem 2rem;
+            border-top: 3px solid #22aaec;
+            border-bottom: 1px dotted #d5d5d5;
+            border-right: 1px dotted #d5d5d5;
+            position: relative;
+            top: -15px;
+            background: #fff;
+            h3 {
+            color: #076e9f;
+            font-family: "League Gothic";
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 14px;
+            text-transform: uppercase;
+            }
+            &-wrapper{
+                display: flex;
+                 .deatils { 
+                display: flex;
+                .date {
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    color: white;
+                    background: #22aaec;
+                    font-size: 8px;
+                    font-family: "Arial MT";
+                    font-weight: bold;
+                    line-height: 10px;
+                    text-align: center;
+                    p {
+                        margin-top: 20px;
+                    }
+                    p:last-child {
+                        margin-top: -5px;
+                    }
+
+                }
+                .who {
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    color: white;
+                    background: #22aaec;
+                    font-size: 8px;
+                    font-family: "Arial MT";
+                    font-weight: bold;
+                    line-height: 10px;
+                    text-align: center;
+                    position: relative;
+                    margin-left: 10px;
+                    img{ 
+                        margin-top: 13px;
+                     }
+                    p {
+                        position: absolute;
+                        top: 23px;
+                        left: 12px;
+                    }
+                    p:first-of-type {
+                        top: 11px;  
+                        left: 23px; 
+                    }
+                }
+            }
+            .read-more {
+               padding: 0 3rem 1rem 2rem;
+               p {
+                color: #5c5c5c;
+                font-family: "Arial MT";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+               }
+               button {
+                margin-top: 30px;
+                color: #ffffff;
+                font-family: "ArialMT";
+                font-size: 10px;
+                font-weight: bold;
+                line-height: 18px;
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+                border: 1px solid #045279;
+                background-color: #076e9f;
+                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+                padding: 5px 10px;
+               }
+               &__social {
+                display: flex;
+                position: absolute;
+                right: -10px;
+                bottom: 45px;
+                background: #90d4f5;
+                padding: 5px 10px;
+                p {
+                    margin: 0;
+                    color: #076e9f;
+                }
+                p, i {
+                    padding: 3px;
+                }
+                i {
+                    color: white;
+                }
+                img {
+                    height: 10px;
+                    width: 10px;
+                    position: absolute;
+                    right: 0;
+                    bottom: -10px;
+                }
+               }
+            }
+            } 
+        }
+        .mid {
+            &-wrapper {
+              padding: 1rem 0rem 2rem 2rem; 
+              display: flex;
+              flex-direction: column;
+              &__top {
+                display: flex;
+
+              .meet {
+                margin-left: .5rem;
+              }
+              .attractions, .meet {
+                max-width: 50%;
+                background-color: #eaeaea;
+                padding: 2rem 3rem;
+                position: relative;
+                border-radius:  15px 0 0 0 ;
+                h3 {
+                    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+                    color: #076e9f;
+                    font-family: "League Gothic";
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 14px;
+                    text-transform: uppercase;
+                }
+                p {
+                    color: #5c5c5c;
+                    font-family: "Arial MT";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    span {
+                        color: #22aaec;
+                    }
+                }
+                a {
+                   color: #22aaec;
+                   text-decoration: none; 
+                    font-family: "Arial MT";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    margin-bottom: 10px;
+                }
+                .bottom-social {
+                    margin-top: 20px;
+                    position: absolute;
+                    bottom: -2rem;
+                    left: 0;
+                    right: 0;
+                    display: flex;
+                    justify-content: flex-end;
+                    background: #f4f3f3;
+                    margin-top: 10px;
+                    padding: 10px 15px;
+                    i {
+                        margin-right: 10px;
+                        color: #90d4f5;
+                    }
+                    p {
+                        margin: 0;
+                        margin-right: 10px;
+                        color: #076e9f;
+                    }
+                
+                }
+                .bottom-social:before, .bottom-social:after
+                {
+                      z-index: -1;
+                        position: absolute;
+                        content: "";
+                        bottom: 15px;
+                        left: 10px;
+                        width: 54%;
+                        top: 20%;
+                        max-width: 300px;
+                  background: #777;
+                  box-shadow: 0 15px 10px #777;
+                  transform: rotate(-3deg);
+                }
+                .bottom-social:after
+                {
+                  transform: rotate(3deg);
+                  right: 10px;
+                  left: auto;
+                }
+              }
+
+              }
+              .ad {
+                margin-top: 4rem;
+                max-width: 100%;
+                background-color: #eaeaea;
+                padding: 1rem 2rem;
+                border-bottom: 1px dotted #d5d5d5;
+                text-align: center;
+                position: relative;
+                p {
+                    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+                    color: #636363;
+                    font-family: "Arial MT";
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 14px;
+                }
+              }
+              .ad:before, .ad:after
+                {
+                      z-index: -1;
+                        position: absolute;
+                        content: "";
+                        bottom: 15px;
+                        left: 10px;
+                        width: 54%;
+                        top: 20%;
+                        max-width: 300px;
+                  background: #777;
+                  box-shadow: 0 15px 10px #777;
+                  transform: rotate(-3deg);
+                }
+                .ad:after
+                {
+                  transform: rotate(3deg);
+                  right: 10px;
+                  left: auto;
+                }
+              
+            }
+        }
+    }
+}
+.map {
+    padding: 0rem 3rem 2rem 3rem; 
+    h3 {
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        color: #076e9f;
+        font-family: "League Gothic";
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 14px;
+    }
+    &-block {
+        height: 400px;
+        width: 100%;
+    }
+}
