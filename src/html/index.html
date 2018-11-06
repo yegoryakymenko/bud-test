@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=a7537c3f-c8a6-4fda-b78d-968fbc03dd1f&lang=ru_RU" type="text/javascript">
+    </script>
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="../css/style.css">
@@ -11,7 +13,7 @@
 <body>
 	<div class="header">
 		<div class="header-navbar">
-			<h3>poznan - city<span>2</span>live</h3>
+			<h3>poz<span>nan</span> - city<span>2</span>live</h3>
 			<ul>
 				<li><a href="#">home</a></li>
 				<li><a href="#">product</a></li>
@@ -112,7 +114,7 @@
 			<div class="currency">
 				<h3>currency</h3>
 				<div class="table">
-					<table cellspacing="2" cellpadding="8">
+					<table cellspacing="2" cellpadding="8" width="100%">
 						<tr bgcolor="#076e9f">
 							<td>Date</td>
 							<td>Value</td>
@@ -217,18 +219,67 @@
 	<div class="map" >
 		<h3>WHERE CAN I FIND MORE INFORMATION</h3>
 		<div class="map-block" id="map"></div>
-
+		<div class="footer">
+			<div class="footer-links">
+				<h4>poz<span>nan</span> - city<span>2</span>live</h4>
+				<ul>
+					<a href="#"><li>home</li></a>
+					<a href="#"><li>product</li></a>
+					<a href="#"><li>services</li></a>
+					<a href="#"><li>contact</li></a>
+				</ul>
+			</div>
+			<p>all rights reserved 2013</p>
+		</div>
 	</div>
 	<script>
-		function initMap(){
-			var element = document.getElementById('map');
-			var options = {
-				zoom: 5,
-				center: {lat: 52.409538, lng: 16.931992}
-			};
-			var myMap = new google.maps.Map(element, options);
-		}
+		 // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    // function init(){ 
+    //     // Создание карты.    
+    //     var myMap = new ymaps.Map("map", {
+    //         center: [52.434667, 16.938579],
+    //         zoom: 15
+    //     });
+    // }
+    function init() {
+    var myMap = new ymaps.Map("map", {
+            center: [52.434667, 16.938579],
+            zoom: 15
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+    // Создаем геообъект с типом геометрии "Точка".
+        myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [52.434667, 16.938579]
+            },
+            properties: {
+                // Контент метки.
+                hintContent: 'Poznan, Murawa'
+            }        
+        }, {
+            preset: 'islands#blackStretchyIcon',
+            iconColor: '#3caa3c',
+            draggable: false
+        });
+
+    myMap.geoObjects
+        .add(myGeoObject)
+        .add(myPieChart)
+        .add(new ymaps.Placemark([52.434667, 16.938579], {
+            balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+        }, {
+            preset: 'islands#icon',
+            iconColor: '#0095b6'
+        }));    
+}
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDczGZ57pJh4sgnTRsUETQgrafLvImPv68&callback=initMap"
-    async defer></script></body>
+
+    
+</body>
 </html>
