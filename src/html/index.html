@@ -114,7 +114,7 @@
 			<div class="currency">
 				<h3>currency</h3>
 				<div class="table">
-					<table cellspacing="2" cellpadding="8" width="100%">
+					<table  cellspacing="2" cellpadding="8">
 						<tr bgcolor="#076e9f">
 							<td>Date</td>
 							<td>Value</td>
@@ -269,14 +269,8 @@
         });
 
     myMap.geoObjects
-        .add(myGeoObject)
-        .add(myPieChart)
-        .add(new ymaps.Placemark([52.434667, 16.938579], {
-            balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
-        }, {
-            preset: 'islands#icon',
-            iconColor: '#0095b6'
-        }));    
+        .add(myGeoObject);
+         
 }
 	</script>
 

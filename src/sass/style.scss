@@ -75,9 +75,6 @@
 html { box-sizing: border-box; }
 
 *:not(img), *:before, *:after { box-sizing: inherit; }
-html, body {
-    height: 100%;
-}
 .header {
     width: 100%;
     &-navbar {
@@ -142,15 +139,15 @@ html, body {
         text-align: center;
         h3 {
             display: block;
-            max-width: 20%;
+            max-width: 22%;
             margin: 0 auto;
-            padding: 25px 30px;
+            padding: 30px 20px;
             background: rgba(255,255,255,.8);
             color: #076e9f;
             font-family: "League Gothic";
             font-size: 60px;
             font-weight: 400;
-            line-height: 18px;
+            line-height: 30px;
             text-transform: uppercase;
             span {
                 color: #22aaec;
@@ -185,7 +182,7 @@ html, body {
             .comment {
                 background: rgba(255,255,255,.9);
                 position: relative;
-                width: 200px;
+                width: 190px;
                 height: 49px;
                 padding: 10px 15px;
                 text-align: left;
@@ -223,12 +220,13 @@ html, body {
 }
 }
 .main {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     display: flex;
     border-bottom: 1px dotted #d5d5d5;
     .aside {
-        max-width: 15%;
+        min-width: 230px;
+        max-width: 230px;
         border-right: 1px dotted #d5d5d5;
         .author {
             border-bottom: 1px dotted #d5d5d5;
@@ -267,7 +265,7 @@ html, body {
                 display: flex;
                 margin-top: 10px;
                 &__comments {
-                    margin-left: 15px;
+                    padding-left: 15px;
                     p:first-child {
                         margin: 0;
                         color: #5c5c5c;
@@ -308,9 +306,10 @@ html, body {
                  text-transform: uppercase;
                 } 
                 .table {
-                    
                     color: #076e9f;
-                    table {
+                    table{
+                        table-layout: auto;
+                        width: 100%;
                         tr {
                             td {
                                 text-align: center;
@@ -324,7 +323,7 @@ html, body {
           }
     }
     .article {
-        padding: 0rem 3rem 0rem 0rem;
+        width: 80%;
         .top {
             padding: 1rem 0rem 2rem 2rem;
             border-top: 3px solid #22aaec;
@@ -576,7 +575,11 @@ html, body {
 }
 .map { 
     h3 {
-        padding: 0rem 3rem 2rem 3rem;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        text-align: left;
         text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
         color: #076e9f;
         font-family: "League Gothic";
@@ -589,7 +592,8 @@ html, body {
         width: 100%;
     }
     .footer {
-        padding: 0rem 3rem 2rem 3rem;
+        width: 95%;
+        margin: 0 auto;
         &-links {
             display: flex;
             justify-content: space-between;
@@ -638,4 +642,268 @@ html, body {
         }
     }
 
+}
+@media screen and  (min-width: 769px) and (max-width: 1024px){
+   .header {
+    &-main {
+        h3 {
+            max-width: 30%;
+        }
+        &__comments {
+            flex-wrap: wrap;
+            padding-top: 2rem;
+            .comment {
+                width: 150px;
+                margin: 1rem 0 0 1rem;
+            }
+        }
+    }
+   }
+}
+@media screen and  (min-width: 481px) and (max-width: 768px){
+   .header {
+    &-navbar {
+        &__social {
+
+        }
+    }
+    &-main {
+        background-position: center;
+        h3 {
+            max-width: 55%;
+            line-height: 50px;
+        }
+        h3 + p {
+          max-width: 75%;
+            line-height: 35px;  
+        }
+        &__comments {
+            flex-wrap: wrap;
+            padding: 1rem 0 2rem 0;
+            .comment {
+                width: 211px;
+                margin-left: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+   }
+   .main {
+    flex-direction: column;
+    .aside{
+        order: 2;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 100%;
+        border-right: none;
+        .author, .posts, .currency {
+          width: 30%;  
+          border-bottom: none;
+        }
+    }
+    .article {
+        width: 100%;
+        order: 1;
+        .mid-wrapper {
+            padding-left: 0;
+            border-bottom: 1px dotted #d5d5d5;
+        }
+    }
+   }
+}
+@media screen and (max-width: 600px){
+   .header {
+    &-navbar {
+        &__social {
+           display: none; 
+        }
+    }
+}
+}
+@media screen and  (min-width: 321px) and (max-width: 480px){
+   .header {
+    &-navbar {
+        ul {
+            li {
+                width: 30%;
+                padding: 5px 5px;
+            }
+        }
+    }
+    &-main {
+        background-position: center;
+        padding-top: 5rem;
+        h3 {
+            max-width: 60%;
+            line-height: 50px;
+            font-size: 50px;
+        }
+        h3 + p {
+            max-width: 75%;
+            line-height: 35px; 
+            font-size: 30px; 
+        }
+        &__comments {
+            flex-wrap: wrap;
+            padding: 1rem 0 2rem 0;
+            .comment {
+                width: 211px;
+                margin-left: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+   }
+   .main {
+    flex-direction: column;
+    width: 90%;
+    .aside{
+        order: 2;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 100%;
+        border-right: none;
+        .author, .posts, .currency {
+          width: 100%;  
+          border-bottom: none;
+        }
+    }
+    .article {
+        width: 100%;
+        order: 1;
+        .top {
+            h3 {
+                line-height: 36px;
+            }
+            &-wrapper {
+                flex-direction: column;
+                .deatils {
+                    order: 1;
+                }
+                .read-more {
+                    order: 2;
+                    padding-left: 0;
+                }
+            }
+        }
+        .mid-wrapper {
+            padding-left: 0;
+            border-bottom: 1px dotted #d5d5d5;
+            &__top {
+                flex-wrap: wrap;
+                .meet, .attractions {
+                    max-width: 100%;
+                }
+                .meet {
+                    margin: 0;
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
+   }
+   .map {
+        h3 {
+        font-size: 25px;
+    }
+    .footer-links {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        h4 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+   }
+}
+@media screen  and (max-width: 320px){
+   .header {
+    &-main {
+        background-position: center;
+        padding-top: 5rem;
+        h3 {
+            max-width: 60%;
+            line-height: 50px;
+            font-size: 50px;
+        }
+        h3 + p {
+            max-width: 75%;
+            line-height: 35px; 
+            font-size: 30px; 
+        }
+        &__comments {
+            flex-wrap: wrap;
+            padding: 1rem 0 2rem 0;
+            .comment {
+                width: 211px;
+                margin-left: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+   }
+   .main {
+    flex-direction: column;
+    width: 90%;
+    .aside{
+        order: 2;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 100%;
+        border-right: none;
+        .author, .posts, .currency {
+          width: 100%;  
+          border-bottom: none;
+        }
+    }
+    .article {
+        width: 100%;
+        order: 1;
+        .top {
+            h3 {
+                line-height: 36px;
+            }
+            &-wrapper {
+                flex-direction: column;
+                .deatils {
+                    order: 1;
+                }
+                .read-more {
+                    order: 2;
+                    padding-left: 0;
+                }
+            }
+        }
+        .mid-wrapper {
+            padding-left: 0;
+            border-bottom: 1px dotted #d5d5d5;
+            &__top {
+                flex-wrap: wrap;
+                .meet, .attractions {
+                    max-width: 100%;
+                }
+                .meet {
+                    margin: 0;
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
+   }
+   .map {
+    h3 {
+        font-size: 25px;
+    }
+    .footer-links {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        h4 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+   }
 }
