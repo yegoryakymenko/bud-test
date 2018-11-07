@@ -726,7 +726,7 @@ html { box-sizing: border-box; }
     &-navbar {
         ul {
             li {
-                width: 30%;
+                width: 31%;
                 padding: 5px 5px;
             }
         }
@@ -820,6 +820,14 @@ html { box-sizing: border-box; }
 }
 @media screen  and (max-width: 320px){
    .header {
+     &-navbar {
+        ul {
+            li {
+                width: 30%;
+                padding: 5px 5px;
+            }
+        }
+    }
     &-main {
         background-position: center;
         padding-top: 5rem;
