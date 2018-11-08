@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=a7537c3f-c8a6-4fda-b78d-968fbc03dd1f&lang=ru_RU" type="text/javascript">
@@ -233,31 +234,9 @@
 		</div>
 	</div>
 	<script>
-    ymaps.ready(init);
+ 		   ymaps.ready(init);
 
-function init () {
-    var myMap;
 
-    $('#toggle').bind({
-        click: function () {
-            if (!myMap) {
-                myMap = new ymaps.Map('map', {
-                    center: [55.010251, 82.958437], // Новосибирск
-                    zoom: 9
-                }, {
-                    searchControlProvider: 'yandex#search'
-                });
-                $("#toggle").attr('value', 'Скрыть карту');
-            }
-            else {
-                myMap.destroy();// Деструктор карты
-                myMap = null;
-                $("#toggle").attr('value', 'Показать карту снова');
-            }
-        }
-    });
-}
-    
     function init() {
     var myMap = new ymaps.Map("map", {
             center: [52.434667, 16.938579],
@@ -287,6 +266,7 @@ function init () {
         .add(myGeoObject);
          
 }
+
 	</script>
 
     
